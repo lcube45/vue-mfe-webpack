@@ -1,10 +1,14 @@
-import { createApp } from "vue";
+// composables
+import { createApp } from "vue"
 import { createStore } from "vuex"
 
-import "./index.css";
+// main component
+import App from "./App.vue"
 
-import App from "./App.vue";
+// Plugins
+import { registerPlugins } from './plugins'
 
+// create basic store
 const store = createStore({
     state() {
         return {
@@ -19,4 +23,6 @@ const store = createStore({
     },
 })
 
-createApp(App).use(store).mount("#app");
+const app = createApp(App)
+registerPlugins(app)
+app.use(store).mount('#app')
