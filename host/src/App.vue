@@ -1,26 +1,34 @@
 <script setup>
 import Header from "team_blue/Header"
+import Navigation from "./components/Navigation.vue"
 import { ref } from 'vue'
 
 const drawer = ref(null)
 </script>
 
+<style>
+.mycenter {
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+</style>
+
 <template>
+  <v-app>
+    <Navigation />
+    <v-main>
       <div class="container">
-        <Header />
-        <div>Name: host</div>
-        <div>Framework: vue3</div>
-        <div>Language: JavaScript</div>
-        <div>CSS: Empty CSS</div>
-        <hr />
         <div><strong>Count: {{ count }}</strong></div>
         <div><v-btn v-on:click="addOne" size="x-large">Add one</v-btn></div>
       </div>
+    </v-main>
+  </v-app>
+
+
 </template>
 
 <script>
 export default {
-  data: () => ({ drawer: null }),
   computed: {
     count() {
       return this.$store.state.count
