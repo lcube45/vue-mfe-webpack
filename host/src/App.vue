@@ -17,7 +17,7 @@ const drawer = ref(null)
 <template>
   <v-app>
     <Navigation />
-    <v-main>
+    <v-main class="ma-8">
       <RouterView />
       <div class="container">
         <div><strong>Count: {{ count }}</strong></div>
