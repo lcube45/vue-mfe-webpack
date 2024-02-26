@@ -1,6 +1,7 @@
 <script setup>
 import Header from "team_blue/Header"
 import Navigation from "./components/Navigation.vue"
+import { RouterView } from 'vue-router'
 import { ref } from 'vue'
 
 const drawer = ref(null)
@@ -17,6 +18,7 @@ const drawer = ref(null)
   <v-app>
     <Navigation />
     <v-main>
+      <RouterView />
       <div class="container">
         <div><strong>Count: {{ count }}</strong></div>
         <div><v-btn v-on:click="addOne" size="x-large">Add one</v-btn></div>

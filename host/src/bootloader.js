@@ -2,6 +2,9 @@
 import { createApp } from "vue"
 import { createStore } from "vuex"
 
+// routes
+import router from "./router"
+
 // main component
 import App from "./App.vue"
 
@@ -25,4 +28,4 @@ const store = createStore({
 
 const app = createApp(App)
 registerPlugins(app)
-app.use(store).mount('#app')
+app.use(router).use(store).mount('#app')
