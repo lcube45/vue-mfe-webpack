@@ -50,7 +50,9 @@ module.exports = (_, argv) => ({
       filename: "remoteEntry.js",
       remotes: {},
       exposes: {
-        "./Header": "./src/Header.vue"
+        "./Header": "./src/Header.vue",
+        './TeamBlueHome': './src/views/HomeView.vue',
+        './TeamBluePage1': './src/views/Page1View.vue',
       },
       shared: require("./package.json").dependencies,
     }),

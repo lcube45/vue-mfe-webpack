@@ -1,3 +1,7 @@
+<script setup>
+import { RouterLink, RouterView } from 'vue-router'
+</script>
+
 <template>
   <v-navigation-drawer v-model="drawer">
     <v-sheet color="grey-lighten-2" class="pa-6 mb-4 mycenter">
@@ -5,8 +9,8 @@
       <div class="text-subtitle-1"><strong>Application Name</strong></div>
   </v-sheet>
   <v-list class="ma-4">
-    <v-list-item title="Dashboard" value="dashboard" rounded="xl"></v-list-item>
-    <v-list-item title="Team Blue" value="blue" rounded="xl"></v-list-item>
+    <v-list-item title="Dashboard" value="dashboard" rounded="xl" router :to="{ path: '/' }"></v-list-item>
+    <v-list-item title="Team Blue" value="blue" rounded="xl" router :to="{ path: '/team-blue' }"></v-list-item>
     <v-list-item title="Team Green" value="green" rounded="xl"></v-list-item>
     </v-list>
   </v-navigation-drawer>

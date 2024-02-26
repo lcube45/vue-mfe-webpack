@@ -57,9 +57,7 @@ export default {
           ],
         },
       },
-      { field: 'model' },
       { field: 'price', filter: 'agNumberColumnFilter' },
-      { field: 'electric' },
       {
         field: 'month',
         comparator: (valueA, valueB) => {

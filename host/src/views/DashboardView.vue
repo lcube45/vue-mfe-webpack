@@ -18,15 +18,10 @@ import WidgetDatagrid from "../components/WidgetDatagrid.vue"
   <v-container class="pa-0 mb-4">
     <v-row>
       <v-col>
-        <v-card height="350px">
+        <v-card height="450px">
           <WidgetChart />
         </v-card>
       </v-col>
-    </v-row>
-  </v-container>
-  <h2 class="mb-4">Consectetur adipiscing elit</h2>
-  <v-container class="pa-0 mb-4">
-    <v-row>
       <v-col>
         <v-card height="450px">
           <WidgetDatagrid />

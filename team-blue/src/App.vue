@@ -1,13 +1,7 @@
 <script setup>
-import Header from "./Header.vue"
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <div class="container">
-    <Header />
-    <div>Name: team-blue</div>
-    <div>Framework: vue3</div>
-    <div>Language: JavaScript</div>
-    <div>CSS: Empty CSS</div>
-  </div>
+  <RouterView />
 </template>
