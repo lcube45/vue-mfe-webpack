@@ -3,6 +3,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const { VueLoaderPlugin } = require("vue-loader");
 const Dotenv = require('dotenv-webpack');
 const { VuetifyPlugin } = require('webpack-plugin-vuetify');
+const path = require('node:path'); 
 
 module.exports = (_, argv) => ({
   output: {
@@ -16,6 +17,8 @@ module.exports = (_, argv) => ({
   devServer: {
     port: 8080,
     historyApiFallback: true,
+    liveReload: true,
+    watchFiles: [path.resolve(__dirname, '..')]
   },
 
   module: {

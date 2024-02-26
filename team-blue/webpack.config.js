@@ -14,6 +14,9 @@ module.exports = (_, argv) => ({
   devServer: {
     port: 8081,
     historyApiFallback: true,
+    devMiddleware: {
+      writeToDisk: true,
+    },
   },
 
   module: {
